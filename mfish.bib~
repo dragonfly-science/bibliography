@@ -1182,25 +1182,14 @@
 }
 
 @article{black_light_2005,
-	author - "A. Black"	
 	title = {Light induced seabird mortality on vessels operating in the Southern Ocean: incidents and mitigation measures},
 	volume = {17},
 	number = {01},
 	journal = {Antarctic Science},
+	author = {Black, Andy},
 	year = {2005},
 	pages = {67--68}
 }
-
-@article{cabezas_the_2012
-author = {L.A. Cabezas and J. Ruiz and O. Yates and M. Bernal},
-title = {The black petrel (\emph{Procellaria parkinsoni}) in pelagic waters off northern Chile: a southern extension to the known distribution and interactions with the pelagic longline fishery},
-journal = {New Zealand Journal of Marine and Freshwater Research},
-volume = {46},
-number = {4},
-pages = {537-544},
-year = {2012},
-}
-
 
 @Article{	  camargo_report_2007,
   author	= "F. S. Camargo and C. Bellini",
