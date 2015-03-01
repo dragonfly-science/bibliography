@@ -129,7 +129,7 @@
       <else>
         <choose>
           <if variable="DOI">
-            <text variable="DOI" prefix="doi:"/>
+            <text variable="DOI" prefix="doi:" suffix=". "/>
           </if>
           <else>
             <choose>
@@ -145,9 +145,9 @@
               </if>
               <else>
                 <group>
-                  <text term="retrieved" text-case="capitalize-first" suffix=" "/>
+                  <text value="available" text-case="capitalize-first" suffix=" "/>
                   <text term="from" suffix=" "/>
-                  <text variable="URL"/>
+                  <text variable="URL" suffix=". "/>
                 </group>
               </else>
             </choose>
