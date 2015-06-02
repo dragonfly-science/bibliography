@@ -1,6 +1,6 @@
 source('../functions.r')
 
-bib <- readLines('zotero.bib', warn=F)
+bib <- readLines('Dragonfly output.bib', warn=F)
 reflist <- parse_bib(bib)
 
 dflyrefs <- extract_dfly_refs(reflist)
