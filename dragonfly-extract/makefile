@@ -5,3 +5,6 @@ dragonfly-references.bib: reflist.rdata extract-dfly-references.r
 
 reflist.rdata: ../mfish.bib parse-bib.r
 	Rscript parse-bib.r
+
+zotero:
+	cd zotero && Rscript zotero.r
