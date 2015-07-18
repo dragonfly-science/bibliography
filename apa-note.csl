@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
+<!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
-    <title>American Psychological Association 6th edition</title>
-    <title-short>APA</title-short>
-    <id>http://www.zotero.org/styles/apa</id>
-    <link href="http://www.zotero.org/styles/apa" rel="self"/>
+    <title>American Psychological Association 6th edition (note)</title>
+    <title-short>APA-Note</title-short>
+    <id>http://www.zotero.org/styles/american-psychological-association-6th-edition-note</id>
+    <link href="http://www.zotero.org/styles/american-psychological-association-6th-edition-note" rel="self"/>
     <link href="http://owl.english.purdue.edu/owl/resource/560/01/" rel="documentation"/>
     <author>
       <name>Simon Kornblith</name>
@@ -27,7 +28,7 @@
     <category citation-format="author-date"/>
     <category field="psychology"/>
     <category field="generic-base"/>
-    <updated>2014-09-23T19:13:50+00:00</updated>
+    <updated>2015-07-18T02:46:04+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -129,7 +130,7 @@
       <else>
         <choose>
           <if variable="DOI">
-            <text variable="DOI" prefix="doi:" suffix=". "/>
+            <text variable="DOI" prefix="doi:"/>
           </if>
           <else>
             <choose>
@@ -145,9 +146,9 @@
               </if>
               <else>
                 <group>
-                  <text value="available" text-case="capitalize-first" suffix=" "/>
+                  <text term="retrieved" text-case="capitalize-first" suffix=" "/>
                   <text term="from" suffix=" "/>
-                  <text variable="URL" suffix=". "/>
+                  <text variable="URL"/>
                 </group>
               </else>
             </choose>
@@ -161,7 +162,6 @@
       <if type="report thesis book graphic motion_picture report song manuscript speech" match="any">
         <choose>
           <if variable="version">
-            <!---This is a hack until we have a computer program type -->
             <text variable="title"/>
           </if>
           <else>
@@ -280,12 +280,6 @@
               </choose>
             </group>
           </if>
-          <else-if variable="status">
-            <group prefix=" (" suffix=")">
-              <text variable="status"/>
-              <text variable="year-suffix" prefix="-"/>
-            </group>
-          </else-if>
           <else>
             <group prefix=" (" suffix=")">
               <text term="no date" form="short"/>
@@ -315,20 +309,11 @@
   <macro name="issued-year">
     <choose>
       <if variable="issued">
-        <group delimiter="/">
-          <group>
-            <date variable="issued">
-              <date-part name="year"/>
-            </date>
-            <text variable="year-suffix"/>
-          </group>
-          <date variable="original-date" form="text"/>
-        </group>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+        <text variable="year-suffix"/>
       </if>
-      <else-if variable="status">
-        <text variable="status"/>
-        <text variable="year-suffix" prefix="-"/>
-      </else-if>
       <else>
         <text term="no date" form="short"/>
         <text variable="year-suffix" prefix="-"/>
@@ -344,7 +329,7 @@
         </group>
       </if>
       <else>
-        <text variable="edition"/>
+        <text variable="edition" suffix="."/>
       </else>
     </choose>
   </macro>
@@ -358,16 +343,6 @@
           </group>
           <text variable="page"/>
         </group>
-        <choose>
-          <!--for advanced online publication-->
-          <if variable="issued">
-            <choose>
-              <if variable="page issue" match="none">
-                <text variable="status" prefix=". "/>
-              </if>
-            </choose>
-          </if>
-        </choose>
       </if>
       <else-if type="article-newspaper">
         <group delimiter=" " prefix=", ">
@@ -453,7 +428,6 @@
               <text variable="volume"/>
               <text variable="container-title"/>
               <group delimiter=" ">
-                <!--change to label variable="section" as that becomes available -->
                 <text term="section" form="symbol"/>
                 <text variable="section"/>
               </group>
@@ -467,7 +441,6 @@
                 <else>
                   <text variable="number" prefix="Pub. L. No. "/>
                   <group delimiter=" ">
-                    <!--change to label variable="section" as that becomes available -->
                     <text term="section" form="symbol"/>
                     <text variable="section"/>
                   </group>
@@ -475,17 +448,6 @@
               </choose>
             </else>
           </choose>
-        </group>
-      </if>
-    </choose>
-  </macro>
-  <macro name="original-date">
-    <choose>
-      <if variable="original-date">
-        <group prefix="(" suffix=")" delimiter=" ">
-          <!---This should be localized-->
-          <text value="Original work published"/>
-          <date variable="original-date" form="text"/>
         </group>
       </if>
     </choose>
@@ -524,8 +486,8 @@
           <text macro="publisher"/>
         </group>
       </group>
+      <text variable="note" prefix=" " suffix="."/>
       <text macro="access" prefix=" "/>
-      <text macro="original-date" prefix=" "/>
     </layout>
   </bibliography>
 </style>
