@@ -6,6 +6,3 @@ mv mfish.bib .mfish.bak.bib
 mv .tool.bib mfish.bib
 rm .clean.bib
 
-bibtool -s -d dragonfly.bib > .dragonfly.bib
-mv dragonfly.bib .dragonfly.bak.bib
-mv .dragonfly.bib dragonfly.bib
