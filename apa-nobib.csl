@@ -503,29 +503,4 @@
       </group>
     </layout>
   </citation>
-  <bibliography hanging-indent="true" et-al-min="8" et-al-use-first="6" et-al-use-last="true" entry-spacing="0" line-spacing="2">
-    <sort>
-      <key macro="author"/>
-      <key macro="issued-sort" sort="ascending"/>
-      <key macro="title"/>
-    </sort>
-    <layout>
-      <group suffix=".">
-        <group delimiter=". ">
-          <text macro="author"/>
-          <text macro="issued"/>
-          <text macro="title-plus-extra"/>
-          <text macro="container"/>
-        </group>
-        <text macro="legal-cites"/>
-        <text macro="locators"/>
-        <group delimiter=", " prefix=". ">
-          <text macro="event"/>
-          <text macro="publisher"/>
-        </group>
-      </group>
-      <text macro="access" prefix=" "/>
-      <text macro="original-date" prefix=" "/>
-    </layout>
-  </bibliography>
 </style>
