@@ -26,3 +26,9 @@ Within the project repository:
 
 `git checkout master`
 
+
+Verify that the sub-module was initiated properly:
+
+  - switch to `bibliography`
+  - `git remote show origin`
+  
